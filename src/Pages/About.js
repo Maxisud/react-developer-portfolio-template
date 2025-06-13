@@ -1,6 +1,6 @@
 import React from "react";
 import Work from "../Components/Work";
-import { personalDetails, workDetails, eduDetails } from "../Details";
+import { personalDetails, internshipDetails, eduDetails, organizationDetails, workExperienceDetails } from "../Details";
 
 function About() {
   return (
@@ -16,13 +16,51 @@ function About() {
           Work Experience
         </h1>
         {React.Children.toArray(
-          workDetails.map(({ Position, Company, Location, Type, Duration }) => (
+          workExperienceDetails.map((detail) => (
             <Work
-              position={Position}
-              company={Company}
-              location={Location}
-              type={Type}
-              duration={Duration}
+              position={detail.Position}
+              company={detail.Company}
+              location={detail.Location}
+              type={detail.Type}
+              duration={detail.Duration}
+              Description={detail.Description}
+            />
+          ))
+        )}
+      </section>
+      <section>
+        <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+          Internship Experience
+        </h1>
+        {React.Children.toArray(
+          internshipDetails.map((detail) => (
+            <Work
+              position={detail.Position}
+              company={detail.Company}
+              location={detail.Location}
+              type={detail.Type}
+              duration={detail.Duration}
+              Description={detail.Description}
+            />
+          ))
+        )}
+      </section>
+      <section>
+        <h1 className="text-2xl pt-10 text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+          Organization Experience
+        </h1>
+        {React.Children.toArray(
+          (typeof organizationDetails !== "undefined"
+            ? organizationDetails
+            : []
+          ).map((detail) => (
+            <Work
+              position={detail.Position}
+              organization={detail.Organization}
+              location={detail.Location}
+              type={detail.Type}
+              duration={detail.Duration}
+              Description={detail.Description}
             />
           ))
         )}
@@ -32,13 +70,14 @@ function About() {
           Education
         </h1>
         {React.Children.toArray(
-          eduDetails.map(({ Position, Company, Location, Type, Duration }) => (
+          eduDetails.map((detail) => (
             <Work
-              position={Position}
-              company={Company}
-              location={Location}
-              type={Type}
-              duration={Duration}
+              position={detail.Position}
+              company={detail.Company}
+              location={detail.Location}
+              type={detail.Type}
+              duration={detail.Duration}
+              Description={detail.Description}
             />
           ))
         )}
