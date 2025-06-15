@@ -25,6 +25,7 @@ import projectImage3 from "./assets/projects/project3.jpg";
 import projectImage4 from "./assets/projects/project4.jpg";
 import projectImage5 from "./assets/projects/project5.jpg";
 import projectImage6 from "./assets/projects/project6.jpg";
+import certGoogleAAD from "./assets/projects/project1.jpg";
 
 // Logos
 
@@ -144,7 +145,7 @@ export const techStackDetails = {
   figma: figma,
 };
 
-// Project Details (unchanged, sample)
+
 export const projectDetails = [
   {
     title: "Scancare MSIB Batch 4 Bangkit Academy",
@@ -198,6 +199,21 @@ export const projectDetails = [
     githubLink: "https://github.com/Maxisud/odin-cv",
   },
 ];
+
+// export const certificationDetails = [
+//   {
+//     title: "Best Graduate of Informatics Engineering Study Program",
+//     image: certGoogleAAD,
+//     techstack: "Android, Kotlin",
+//     certificateLink: "https://www.credential.net/sample-link",
+//   },
+//   {
+//     title: "TOEFL ITP. Score : 537",
+//     image: certGoogleAAD,
+//     techstack: "Android, Kotlin",
+//     certificateLink: "https://www.credential.net/sample-link",
+//   },
+// ];
 
 // Contact Details
 export const contactDetails = {

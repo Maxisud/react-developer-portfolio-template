@@ -52,6 +52,11 @@ function Header() {
               Projects
             </NavLink>
           </li>
+          {/* <li className="pb-1 md:pb-0">
+            <NavLink to="/certifications" onClick={toggleClass}>
+              Certification
+            </NavLink>
+          </li> */}
           <li>
             <NavLink to="/contact" onClick={toggleClass}>
               Contact
